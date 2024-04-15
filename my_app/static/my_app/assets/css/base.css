@@ -1,0 +1,96 @@
+details, summary {
+    transition: 0.2s all ease;
+}
+
+#hamburger {
+    border: 1px solid rgb(142, 255, 255);
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+#hamburger .ham-item {
+    width: 22px;
+    height: 2px;
+    border-radius: 100px;
+    background-color: black;
+}
+
+#hamburger div:first-child {
+
+}
+
+#hamburger:nth-child(2) {
+
+}
+
+#hamburger div:last-child {
+
+}
+
+input {
+    transition: background-color .2s, border-color .2s ease-in-out;
+    background-color: #f3f2f7;
+}
+
+label {
+    transition: 0.3s all ease;
+    background-color: #f3f2f7;
+    user-select: none;
+}
+
+#search-box:focus+label {
+    top: -16px;
+    left: 0;
+    padding: 1px 8px;
+
+}
+
+
+.slider-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE & Edge */
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.slider-container a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.slider-container a:hover {
+    background-color: #f0f0f0;
+
+}
+
+
+#links-slider-previous-btn:active,
+#links-slider-next-btn:active {
+    transform: scale(1.2);
+}
+
+.translate-x-100vw {
+    transform: translateX(100vw);
+}
+
+
+
+
+
+
+@media only screen and (min-width:805px) {
+    #links-slider-previous-btn,
+    #links-slider-next-btn {
+        display: none;
+    }
+}

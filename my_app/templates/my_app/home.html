@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Decay Official Site - Cosmetics & Cruelty-Free Makeup</title>
+    <link rel="stylesheet" href="{% static 'my_app/assets/css/base.css' %}" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="max-w-[125rem] m-auto p-1 overflow-x-hidden">
+      <!-- Include the navbar -->
+      {% include 'my_app/navbar.html' %}
+
+      <div class="transition duration-500">
+
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga! Perferendis voluptatibus atque ipsum eius unde dolorum vel eos ullam illum nostrum dicta, sint distinctio totam, temporibus, saepe rem. Aspernatur.
+        Ut fuga obcaecati tempora praesentium saepe delectus accusantium illum eos error, aliquid amet perferendis vitae recusandae suscipit voluptate voluptates, quaerat aperiam minima nihil culpa, non nemo? Dolorum odio vero fuga?
+        Hic repellendus corporis, asperiores animi alias rem aliquam quaerat libero impedit illo excepturi fugiat a amet quia error unde recusandae pariatur consequatur obcaecati voluptates expedita minima, facere ipsum rerum? Sint!
+        Nobis magni quisquam, eveniet quam veniam quos est sed vitae velit labore excepturi reiciendis cupiditate delectus modi consequatur voluptate minima! Ducimus asperiores ipsum eos iure, maiores quam quas dolores architecto?
+        Dolor, cumque facilis magnam odit expedita sapiente, modi eveniet officiis, molestias amet assumenda a eius aliquid praesentium autem blanditiis dicta iure ea ex? Nulla quasi aliquid maiores alias? Aut, sapiente?
+        Officia iusto dolores, recusandae laborum porro eaque, inventore quos in maxime accusantium rerum? Qui, reprehenderit alias? Doloremque hic enim soluta officiis esse eius pariatur debitis accusantium, quibusdam quos maxime cupiditate?
+        Dicta error nesciunt, molestiae assumenda nobis cupiditate saepe vero dolorum iure. Itaque numquam quibusdam mollitia omnis nihil unde fugit obcaecati deleniti, temporibus debitis nesciunt? Expedita ullam atque soluta commodi natus?
+        Eveniet, consequatur odit corporis modi aliquid mollitia temporibus quod blanditiis magnam, at vero dolorem tempore vel quae hic quisquam veniam libero omnis quibusdam delectus praesentium reprehenderit tenetur fugiat! Ipsa, quaerat.
+        Rerum sint consequuntur porro voluptates, aliquam ipsa obcaecati, odio nobis saepe recusandae voluptatem cum reprehenderit hic harum ullam, quam culpa numquam est officiis dolorum nam ipsum. Perspiciatis ratione voluptates facere!</p>
+        {% comment %} <picture>
+          <source media="(min-width:1024px)" srcset="{% static "my_app/assets/images/SPRINGLING-DESKTOP-BANNER.jpg" %}" />
+          <img srcset="{% static "my_app/assets/images/SPRINGLING-MOBILE-BANNER.jpg" %}" alt="SPRINGLING-MOBILE-BANNER" />
+        </picture> {% endcomment %}
+      </div>
+    </main>
+  </body>
+</html>

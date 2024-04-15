@@ -1,0 +1,227 @@
+{% load static %}
+
+<!-- Header Here -->
+<header class="w-full py-3 px-3">
+<div class="flex justify-between items-center">
+    <!-- Hamburger Here -->
+    <button class="flex lg:hidden" id="hamburger">
+    <div class="ham-item"></div>
+    <div class="ham-item"></div>
+    <div class="ham-item"></div>
+    </button>
+
+
+    <div>
+        <!-- Select Your Location Button Here-->
+        <button class="hidden lg:flex relative items-center gap-2 justify-end">
+            <p class="font-semibold">$ - US (EN)</p>
+            <img class="w-3 absolute right-[-22px] top-[10px]" src="{% static 'my_app/assets/icons/chevron-down.svg' %}" alt="">
+        </button>
+
+        <!-- Start From Here -->
+
+        <div class="bg"></div>
+
+    </div>
+
+
+
+
+
+    <!-- Site Logo Here -->
+    <a href="#" class="site-logo select-none w-[35%] max-w-[245px] min-w-[98px]">
+        <img class="w-full" src="{% static 'my_app/assets/logo/site-logo.svg' %}" alt="site-logo" draggable="false" />
+    </a>
+
+    <!-- Header Side Icons Here - Star - Shopping Cart  -->
+    <div class="flex items-center gap-2">
+    <button>
+        <i class="fa-regular fa-star text-black"></i>
+    </button>
+
+    <button>
+        <div class="relative">
+        <img class="h-4 w-4" src="{% static 'my_app/assets/icons/basket.svg' %}" alt="site-logo" draggable="false" />
+        <div class="absolute bottom-[5px] left-[10px] w-4 h-4 bg-[#45169b] text-white flex items-center justify-center p-1 rounded-full">
+            <p class="total-items-in-cart font-thin text-[11px]">3</p>
+        </div>
+        </div>
+    </button>
+    </div>
+</div>
+
+<!-- Input Search Box -->
+
+<form action="" class="input-container relative flex items-center mt-4 lg:justify-end">
+    <input class="w-full border-none outline-none px-1.5 py-2 rounded-sm lg:w-64" type="text" name="search-box" id="search-box" autofocus />
+    <label class="py-px px-2 absolute font-thin text-[11px] rounded-sm lg:hidden" for="search-box">I'm looking for</label>
+    <button class="absolute right-2.5">
+    <img class="max-w-5 w-full" src="{% static 'my_app/assets/icons/search.svg' %}" alt="search" draggable="false" />
+    </button>
+</form>
+
+<!-- Nav Links Here -->
+<div class="relative">
+    <nav class="px-3 m-auto flex items-center justify-between mt-5 lg:max-w-[90%] slider-container" id="sliderContainer">
+    <a href="#" class="text-[#ab000d] text-sm font-semibold text-nowrap">Sale</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">New</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">Best</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">Tips & Trends</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">Virtual Services</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">Products</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">About</a>
+    <a href="#" class="text-sm font-semibold text-nowrap hover:text-[#45169b]">UD Rewards</a>
+    </nav>
+
+    <button class="transition duration-500 absolute top-[36%] pr-4 bg-white lg:invisible" id="links-slider-previous-btn">
+    <img class="w-1.5 rotate-180" src="{% static 'my_app/assets/icons/arrow.svg' %}" alt="previous button" draggable="false" />
+    </button>
+    <button class="transition duration-500 absolute top-[36%] right-0 pl-4 bg-white lg:invisible" id="links-slider-next-btn">
+    <img class="w-1.5" src="{% static 'my_app/assets/icons/arrow.svg' %}" alt="next button" draggable="false" />
+    </button>
+</div>
+
+<div class="fixed bg-white select-none transition duration-500 translate-x-100vw lg:translate-x-[100vw] lg:fixed" id="mobile-nav-container">
+    <!-- Mobile Navbar Items Here -->
+
+    <!-- First Mobile Navbar Item -->
+
+    <div class="relative group mobile-nav-item">
+    <details>
+        <summary class="list-none cursor-pointer text-[#ab000d] text-sm font-semibold text-nowrap border-t-[1px] border-gray-300 p-4">Sale</summary>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">25% Off Sitewide</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">View All</a>
+    </details>
+
+
+    <!-- Second Mobile Navbar Item -->
+
+    <div class="flex flex-col gap-1 absolute right-0 top-[26px] transform transition duration-500">
+        <button class="w-[15px] h-[1px] bg-gray-500 rounded-full"></button>
+        <button class="w-[15px] h-[1px] bg-gray-500 rotate-90 -translate-y-1 rounded-full"></button>
+    </div>
+
+    <div class="relative group mobile-nav-item">
+    <details>
+        <summary class="list-none cursor-pointer text-[#ab000d] text-sm font-semibold text-nowrap border-t-[1px] border-gray-300 p-4">New</summary>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">All New</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">New! Face Bond</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">New! AI Shade Finder</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">Spring Fling Sale</a>
+    </details>
+
+    <div class="flex flex-col gap-1 absolute right-0 top-[26px] transform transition duration-500">
+        <button class="w-[15px] h-[1px] bg-gray-500 rounded-full"></button>
+        <button class="w-[15px] h-[1px] bg-gray-500 rotate-90 -translate-y-1 rounded-full"></button>
+    </div>
+
+
+    <!-- Third Mobile Navbar Item -->
+
+    <div class="relative group mobile-nav-item">
+    <details>
+        <summary class="list-none cursor-pointer text-[#ab000d] text-sm font-semibold text-nowrap border-t-[1px] border-gray-300 p-4">Best Sellers</summary>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">All Best Sellers</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">All Nighter Setting Spray</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">24/7 Inks Liquid Eyeliner</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">24/7 Glide-On Eye Pencil</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">Vice Lip Bond Liquid Lipstick</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">24/7 Multi-Use Quickie Concealer</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">Vegan Makeup</a>
+    </details>
+
+    <div class="flex flex-col gap-1 absolute right-0 top-[26px] transform transition duration-500">
+        <button class="w-[15px] h-[1px] bg-gray-500 rounded-full"></button>
+        <button class="w-[15px] h-[1px] bg-gray-500 rotate-90 -translate-y-1 rounded-full"></button>
+    </div>
+
+
+    <!-- Forth Mobile Navbar Item -->
+    <div class="relative group mobile-nav-item">
+    <details>
+        <summary class="list-none cursor-pointer text-[#ab000d] text-sm font-semibold text-nowrap border-t-[1px] border-gray-300 p-4">Tips & Trends</summary>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">Services</a>
+        <a href="#" class="block text-sm text-nowrap border-t-[1px] border-gray-300 py-3 px-[15px] text-gray-500 hover:text-[#45169b]">View all</a>
+    </details>
+
+    <div class="flex flex-col gap-1 absolute right-0 top-[26px] transform transition duration-500">
+        <button class="w-[15px] h-[1px] bg-gray-500 rounded-full"></button>
+        <button class="w-[15px] h-[1px] bg-gray-500 rotate-90 -translate-y-1 rounded-full"></button>
+    </div>
+    </div>
+
+
+    <!-- User Account Button Here -->
+
+    <div class="relative flex items-center my-4">
+    <button class="text-left pl-10 py-1 pr-4 w-full">My account</button>
+    <img class="absolute w-4" src="{% static 'my_app/assets/icons/user.svg' %}" alt="user-icon">
+    </div>
+
+    
+    <!-- User Order Status Button Here -->
+
+    <div class="relative flex items-center my-4">
+    <button class="text-left pl-10 py-1 pr-4 w-full">Order Status</button>
+    <img class="absolute w-4" src="{% static 'my_app/assets/icons/questionmark.svg' %}" alt="user-icon">
+    </div>
+
+
+    <!-- Near-By Store Button Here -->
+
+    <div class="relative flex items-center my-4">
+    <button class="text-left pl-10 py-1 pr-4 w-full">Stores</button>
+    <img class="absolute w-4" src="{% static 'my_app/assets/icons/pin.svg' %}" alt="user-icon">
+    </div>
+</div>
+</header>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const sliderContainer = document.getElementById("sliderContainer");
+    const prevBtn = document.querySelector("#links-slider-previous-btn");
+    const nextBtn = document.querySelector("#links-slider-next-btn");
+    const sliderItems = sliderContainer.querySelectorAll("a");
+    const scrollAmount = 200; // Adjust scroll amount as needed
+
+    prevBtn.addEventListener("click", () => {
+        sliderContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth",
+        });
+    });
+
+    nextBtn.addEventListener("click", () => {
+        sliderContainer.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+        });
+    });
+    });
+
+
+
+    const hamburger = document.querySelector("#hamburger");
+    const mobileNavContainer = document.querySelector("#mobile-nav-container");
+    let isHumbOpen = false;
+
+    hamburger.addEventListener("click", ()=> {
+        if (isHumbOpen) {
+            mobileNavContainer.classList.add("translate-x-100vw");
+            mobileNavContainer.classList.add("fixed");
+            mobileNavContainer.classList.remove("static");
+            isHumbOpen = false;
+        }
+        else {
+            mobileNavContainer.classList.remove("translate-x-100vw");
+            mobileNavContainer.classList.remove("fixed");
+            mobileNavContainer.classList.add("static");
+            isHumbOpen = true;
+        }
+    
+    })
+
+    
+
+</script>
